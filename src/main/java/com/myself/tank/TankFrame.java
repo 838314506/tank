@@ -21,7 +21,7 @@ public class TankFrame extends Frame {
 
     List<Explored> explored = new ArrayList<>();
 
-    static final int GAME_WIDTH = 1080, GAME_HEIGHT = 960;
+    static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
     public TankFrame() {
         setSize(GAME_WIDTH, GAME_HEIGHT);
