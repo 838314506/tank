@@ -4,7 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" description="this.addKeyListener(new MyKeyListener());" line="31" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abca240f-0894-4873-97f4-a3a8d8be917d" name="Default Changelist" comment="" />
+    <list default="true" id="abca240f-0894-4873-97f4-a3a8d8be917d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +20,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tank$PropertyMgr.ic" NAME="PropertyMgr Coverage Results" MODIFIED="1606636651138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.myself.tank.resourceMge.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/tank$T.ic" NAME="T Coverage Results" MODIFIED="1606631759216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.myself.tank.*</FILTER>
     </SUITE>
@@ -47,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="552">
               <caret line="165" column="43" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1750">
-              <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
               <folding>
                 <element signature="e#1988#1989#0" expanded="true" />
                 <element signature="e#2012#2013#0" expanded="true" />
@@ -94,8 +103,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="176">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,7 +167,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>frame.</find>
+      <find>TRANK_HEIGHT</find>
     </findStrings>
+    <replaceStrings>
+      <replace>HEIGHT</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -152,6 +189,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Trank.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" />
       </list>
     </option>
@@ -190,6 +229,7 @@
     <option name="width" value="1346" />
     <option name="height" value="698" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -230,6 +270,13 @@
             </path>
             <path>
               <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -243,7 +290,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606635455731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606636801068" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -271,7 +318,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.T">
+    <configuration name="PropertyMgr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.resourceMge.PropertyMgr" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myself.tank.resourceMge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myself.tank.T" />
       <module name="tank" />
@@ -288,6 +348,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.T" />
+        <item itemvalue="Application.PropertyMgr" />
       </list>
     </recent_temporary>
   </component>
@@ -306,16 +367,15 @@
       <workItem from="1604879722327" duration="1688000" />
       <workItem from="1606429293778" duration="8646000" />
       <workItem from="1606519987101" duration="800000" />
-      <workItem from="1606520829199" duration="20161000" />
+      <workItem from="1606520829199" duration="21327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34175000" />
+    <option name="totallyTimeSpent" value="35341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19303557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -326,8 +386,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3188406" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.46698874" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48064515" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43064517" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -354,6 +414,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java</url>
+          <line>8</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/A.java">
@@ -418,7 +490,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1750">
-          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
           <folding>
             <element signature="e#1988#1989#0" expanded="true" />
             <element signature="e#2012#2013#0" expanded="true" />
@@ -448,7 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="552">
           <caret line="165" column="43" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -478,10 +550,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="176">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
