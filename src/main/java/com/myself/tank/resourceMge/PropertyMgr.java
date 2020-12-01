@@ -6,21 +6,6 @@ import java.util.Properties;
 
 public class PropertyMgr {
 
-    private static volatile PropertyMgr pm = null;
-
-    private PropertyMgr(){}
-
-    public static PropertyMgr getInstance(){
-        if (pm == null){
-            synchronized (PropertyMgr.class){
-                if (pm == null){
-                    pm = new PropertyMgr();
-                }
-            }
-        }
-        return pm;
-    }
-
     static Properties properties = new Properties();
 
     static {

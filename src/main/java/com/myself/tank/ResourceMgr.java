@@ -1,5 +1,6 @@
 package com.myself.tank;
 
+import com.myself.tank.resourceMge.PropertyMgr;
 import com.myself.tank.util.ImageUtil;
 
 import javax.imageio.ImageIO;
@@ -8,6 +9,22 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class ResourceMgr {
+
+    private static volatile ResourceMgr pm = null;
+
+    private ResourceMgr(){}
+
+    public static ResourceMgr getInstance(){
+        if (pm == null){
+            synchronized (PropertyMgr.class){
+                if (pm == null){
+                    pm = new ResourceMgr();
+                }
+            }
+        }
+        return pm;
+    }
+
 
     public static BufferedImage goodTankL, goodTankU, goodTankR, goodTankD;
 

@@ -1,11 +1,11 @@
-package com.myself.tank;
+package com.myself.tank.design.abstractfactory;
 
-import com.myself.tank.design.abstractfactory.BaseBullet;
-import com.myself.tank.design.abstractfactory.BaseTank;
+import com.myself.tank.*;
 
 import java.awt.*;
 
-public class Bullet extends BaseBullet {
+public class RectBullet extends BaseBullet {
+
     public static final int WIDTH = ResourceMgr.bulletD.getWidth();
     public static final int HEIGHT = ResourceMgr.bulletD.getHeight();
     private static final int SPEED = 10;
@@ -18,7 +18,7 @@ public class Bullet extends BaseBullet {
 
     private boolean live = true;
 
-    public Bullet(int x, int y, Dir dir, TankFrame tf, Group group){
+    public RectBullet(int x, int y, Dir dir, TankFrame tf, Group group){
         this.x = x;
         this.y = y;
         this.dir = dir;
@@ -37,22 +37,26 @@ public class Bullet extends BaseBullet {
         if (!live){
             tf.bullets.remove(this);
         }
-        switch (dir) {
-            case DOWN:
-                a.drawImage(ResourceMgr.bulletD, x, y, null);
-                break;
-            case UP:
-                a.drawImage(ResourceMgr.bulletU, x, y, null);
-                break;
-            case LEFT:
-                a.drawImage(ResourceMgr.bulletL, x, y, null);
-                break;
-            case RIGHT:
-                a.drawImage(ResourceMgr.bulletR, x, y, null);
-                break;
-            default:
-                break;
-        }
+        Color c = a.getColor();
+        a.setColor(Color.YELLOW);
+        a.fillRect(x, y, 20, 20);
+        a.setColor(c);
+//        switch (dir) {
+//            case DOWN:
+//                a.drawImage(ResourceMgr.bulletD, x, y, null);
+//                break;
+//            case UP:
+//                a.drawImage(ResourceMgr.bulletU, x, y, null);
+//                break;
+//            case LEFT:
+//                a.drawImage(ResourceMgr.bulletL, x, y, null);
+//                break;
+//            case RIGHT:
+//                a.drawImage(ResourceMgr.bulletR, x, y, null);
+//                break;
+//            default:
+//                break;
+//        }
         move();
     }
 

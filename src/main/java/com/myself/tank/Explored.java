@@ -1,8 +1,10 @@
 package com.myself.tank;
 
+import com.myself.tank.design.abstractfactory.BaseExplored;
+
 import java.awt.*;
 
-public class Explored {
+public class Explored extends BaseExplored {
     public static final int WIDTH = ResourceMgr.explored[0].getWidth();
     public static final int HEIGHT = ResourceMgr.explored[0].getHeight();
     public int x,y;

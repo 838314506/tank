@@ -1,5 +1,7 @@
 package com.myself.tank;
 
+import com.myself.tank.design.abstractfactory.*;
+
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -15,13 +17,15 @@ public class TankFrame extends Frame {
 
     Tank myTrank = new Tank(300, 300, Dir.DOWN, this,Group.GOOD);
 
-    List<Tank> foeTranks = new ArrayList<>();
+    public List<BaseTank> foeTranks = new ArrayList<>();
 
-    List<Bullet> bullets = new ArrayList<>();
+    public List<BaseBullet> bullets = new ArrayList<>();
 
-    List<Explored> explored = new ArrayList<>();
+    public List<BaseExplored> explored = new ArrayList<>();
 
-    static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
+    public AbstractFactory af = new DefaultFactory();
+
+    public static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
     public TankFrame() {
         setSize(GAME_WIDTH, GAME_HEIGHT);
@@ -102,7 +106,7 @@ public class TankFrame extends Frame {
                     bD = true;
                     break;
                 case KeyEvent.VK_CONTROL:
-                    myTrank.fire();
+                    myTrank.fire(DefaultStrategy.getInstance());
                     break;
                 default:
                     break;

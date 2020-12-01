@@ -1,2 +1,4 @@
 #### tank
 tank.initTankCount=10
+goodFS=com.myself.tank.FourDirFirStrategy
+badFS=com.myself.tank.DefaultStrategy
