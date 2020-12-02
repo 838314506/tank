@@ -15,7 +15,7 @@ public class Tank {
     private int x, y;
     //方向
     private Dir dir = Dir.DOWN;
-    private TankFrame tf = null;
+    private GameModel gm = null;
 
     public Group group = Group.BAD;
 
@@ -40,13 +40,12 @@ public class Tank {
         this.moving = moving;
     }
 
-    public Tank(int x, int y, Dir dir, TankFrame tf, Group group) {
+    public Tank(int x, int y, Dir dir,GameModel gm, Group group) {
         this.x = x;
         this.y = y;
         this.dir = dir;
-        this.tf = tf;
         this.group = group;
-
+        this.gm = gm;
         rect.x = this.x;
         rect.y = this.y;
         rect.width = WIDTH;
@@ -64,7 +63,7 @@ public class Tank {
     //画坦克
     public void paint(Graphics a) {
         if (!live){
-            tf.foeTranks.remove(this);
+            gm.foeTranks.remove(this);
         }
 
         switch (dir) {
@@ -133,7 +132,7 @@ public class Tank {
     public void fire() {
         int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
         int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
-        tf.bullets.add(new Bullet(bx, by, dir, tf,this.group));
+        gm.bullets.add(new Bullet(bx, by, dir, gm,this.group));
 //        for (int i = 0;i < tf.bullets.size();i ++){
 //            Bullet bullet = tf.bullets.get(i);
 //            if (x < bullet.x && 2 * x > bullet.x && y == bullet.y){
@@ -164,7 +163,7 @@ public class Tank {
         this.live = false;
         int eX = this.x + Tank.WIDTH / 2 - Explored.WIDTH / 2;
         int eY = this.y + Tank.HEIGHT / 2 - Explored.HEIGHT / 2;
-        Explored e = new Explored(eX, eY, tf);
-        tf.explored.add(e);
+        Explored e = new Explored(eX, eY, gm);
+        gm.explored.add(e);
     }
 }

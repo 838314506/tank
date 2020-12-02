@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" description="this.addKeyListener(new MyKeyListener());" line="31" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" description="this.addKeyListener(new MyKeyListener());" line="21" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abca240f-0894-4873-97f4-a3a8d8be917d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/GameModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/Explored.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/Explored.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,13 +38,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            <state relative-caret-position="575">
+              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +55,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="450">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/GameModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+            <state relative-caret-position="295">
+              <caret line="165" column="26" lean-forward="true" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#565#566#0" expanded="true" />
@@ -83,74 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1750">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/java/jdk/jdk1.8.0_162/src.zip!/java/util/Hashtable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8000">
-              <caret line="362" selection-start-line="362" selection-end-line="362" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/java/jdk/jdk1.8.0_162/src.zip!/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35275">
-              <caret line="1474" selection-start-line="1474" selection-end-line="1474" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/util/ImageUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/ResourceMgr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -161,6 +122,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -169,6 +131,8 @@
     <findStrings>
       <find>frame.</find>
       <find>TRANK_HEIGHT</find>
+      <find>rect</find>
+      <find>fireStrategy</find>
     </findStrings>
     <replaceStrings>
       <replace>HEIGHT</replace>
@@ -177,6 +141,11 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -184,17 +153,40 @@
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Dir.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Group.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/TrankFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/util/ImageUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/ResourceMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Trank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/SingleStaticClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/resourceMge/PropertyMgr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/ResourceMgr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/SingleEnumClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Comparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Cat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Dog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Sort.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/TankInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/AbstractTankFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/BadTankFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseExplored.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/AbstractFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/DefaultFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectExplored.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/FireStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/DefaultStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/FourDirFirStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseBullet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectBullet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectTank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseTank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/GameModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/T.java" />
       </list>
     </option>
   </component>
@@ -226,9 +218,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="17" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="27" />
+    <option name="y" value="35" />
     <option name="width" value="1346" />
     <option name="height" value="698" />
   </component>
@@ -238,8 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,15 +268,6 @@
               <item name="tank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tank" type="462c0819:PsiDirectoryNode" />
-              <item name="resourceMge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,12 +278,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606639093437" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606950100311" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -311,6 +294,9 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.myself.tank.design.abstractfactory" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myself.tank" />
     </key>
@@ -331,12 +317,51 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.T">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.straegy.Main" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myself.tank.design.straegy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PropertyMgr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myself.tank.resourceMge.PropertyMgr" />
       <module name="tank" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.myself.tank.resourceMge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleEnumClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.SingleEnumClass" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myself.tank.design.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.straegy.Sort" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myself.tank.design.straegy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -360,7 +385,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.T" />
+        <item itemvalue="Application.Sort" />
+        <item itemvalue="Application.SingleEnumClass" />
         <item itemvalue="Application.PropertyMgr" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -381,6 +409,8 @@
       <workItem from="1606519987101" duration="800000" />
       <workItem from="1606520829199" duration="22775000" />
       <workItem from="1606689585944" duration="361000" />
+      <workItem from="1606691007566" duration="2577000" />
+      <workItem from="1606744846351" duration="11654000" />
     </task>
     <task id="LOCAL-00001" summary="添加配置文件">
       <created>1606636896097</created>
@@ -407,13 +437,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37150000" />
+    <option name="totallyTimeSpent" value="52912000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="27" y="35" width="1346" height="698" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1960636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21789883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -423,14 +453,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.48064515" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.048387095" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.05319149" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.1078905" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.10638298" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="MyBatis Log" order="13" />
@@ -499,77 +529,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/SingleStaticClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/SingleEnumClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Comparator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Cat.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Dog.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/straegy/Sort.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+        <state relative-caret-position="50">
+          <caret line="2" column="6" selection-start-line="2" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/AbstractTankFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/BadTankFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseExplored.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/AbstractFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectExplored.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/DefaultFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/DefaultStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/FireStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/FourDirFirStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectBullet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseBullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/RectTank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="method#move#0;class#RectTank#0" />
+            <element signature="method#boundsCheck#0;class#RectTank#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/design/abstractfactory/BaseTank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1201#1202#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3252#3253#0" expanded="true" />
-            <element signature="e#3742#3743#0" expanded="true" />
-            <element signature="e#3766#3767#0" expanded="true" />
-            <element signature="e#3797#3798#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3848#3849#0" expanded="true" />
-            <element signature="e#3872#3873#0" expanded="true" />
-            <element signature="e#3903#3904#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-          <folding>
-            <element signature="e#1988#1989#0" expanded="true" />
-            <element signature="e#2012#2013#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -614,6 +630,81 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/TankFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="165" column="26" lean-forward="true" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#3194#3195#0" expanded="true" />
+            <element signature="e#3252#3253#0" expanded="true" />
+            <element signature="e#3742#3743#0" expanded="true" />
+            <element signature="e#3766#3767#0" expanded="true" />
+            <element signature="e#3797#3798#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3848#3849#0" expanded="true" />
+            <element signature="e#3872#3873#0" expanded="true" />
+            <element signature="e#3903#3904#0" expanded="true" />
+            <element signature="e#3929#3930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/GameModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/Explored.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>

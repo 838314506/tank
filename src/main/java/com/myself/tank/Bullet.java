@@ -8,18 +8,18 @@ public class Bullet {
     private static final int SPEED = 10;
     public int x,y;
     private Dir dir;
-    private TankFrame tf = null;
+    private GameModel gm = null;
     private Group group = Group.BAD;
 
     private Rectangle rect = new Rectangle();
 
     private boolean live = true;
 
-    public Bullet(int x, int y, Dir dir, TankFrame tf, Group group){
+    public Bullet(int x, int y, Dir dir, GameModel gm, Group group){
         this.x = x;
         this.y = y;
         this.dir = dir;
-        this.tf = tf;
+        this.gm = gm;
         this.group = group;
 
         rect.x = this.x;
@@ -30,7 +30,7 @@ public class Bullet {
 
     public void paint(Graphics a){
         if (!live){
-            tf.bullets.remove(this);
+            gm.bullets.remove(this);
         }
         switch (dir) {
             case DOWN:
