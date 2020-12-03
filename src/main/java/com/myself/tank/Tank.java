@@ -1,10 +1,12 @@
 package com.myself.tank;
 
+import com.myself.tank.mediator.GameObject;
+
 import java.awt.*;
 import java.util.Random;
 
 //坦克
-public class Tank {
+public class Tank extends GameObject {
     //坦克宽度、高度
     static final int WIDTH = ResourceMgr.goodTankU.getWidth();
     static final int HEIGHT = ResourceMgr.goodTankU.getHeight();
@@ -13,13 +15,18 @@ public class Tank {
     private boolean moving = true;
     private boolean live = true;
     private int x, y;
+    private int oldX,oldY;
     //方向
     private Dir dir = Dir.DOWN;
     private GameModel gm = null;
 
-    public Group group = Group.BAD;
+    private Group group = Group.BAD;
 
     private Random random = new Random();
+
+    public Group getGroup() {
+        return group;
+    }
 
     public Rectangle getRect() {
         return rect;
@@ -29,7 +36,7 @@ public class Tank {
         this.rect = rect;
     }
 
-    Rectangle rect = new Rectangle();
+    private Rectangle rect = new Rectangle();
 
 
     public boolean isMoving() {
@@ -63,7 +70,7 @@ public class Tank {
     //画坦克
     public void paint(Graphics a) {
         if (!live){
-            gm.foeTranks.remove(this);
+            gm.remove(this);
         }
 
         switch (dir) {
@@ -87,6 +94,8 @@ public class Tank {
 
     //移动
     public void move() {
+        this.oldX = x;
+        this.oldY = y;
         if (!moving) return;
         switch (dir) {
             case LEFT:
@@ -132,7 +141,7 @@ public class Tank {
     public void fire() {
         int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
         int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
-        gm.bullets.add(new Bullet(bx, by, dir, gm,this.group));
+        gm.add(new Bullet(bx, by, dir, gm,this.group));
 //        for (int i = 0;i < tf.bullets.size();i ++){
 //            Bullet bullet = tf.bullets.get(i);
 //            if (x < bullet.x && 2 * x > bullet.x && y == bullet.y){
@@ -164,6 +173,11 @@ public class Tank {
         int eX = this.x + Tank.WIDTH / 2 - Explored.WIDTH / 2;
         int eY = this.y + Tank.HEIGHT / 2 - Explored.HEIGHT / 2;
         Explored e = new Explored(eX, eY, gm);
-        gm.explored.add(e);
+        gm.add(e);
+    }
+
+    public void rollback(){
+        this.x = oldX;
+        this.y = oldY;
     }
 }

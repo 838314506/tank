@@ -1,8 +1,10 @@
 package com.myself.tank;
 
+import com.myself.tank.mediator.GameObject;
+
 import java.awt.*;
 
-public class Explored {
+public class Explored extends GameObject {
     public static final int WIDTH = ResourceMgr.explored[0].getWidth();
     public static final int HEIGHT = ResourceMgr.explored[0].getHeight();
     public int x,y;
@@ -19,7 +21,7 @@ public class Explored {
     public void paint(Graphics a){
         a.drawImage(ResourceMgr.explored[step++],x,y,null);
         if (step >= ResourceMgr.explored.length){
-            gm.explored.remove(this);
+            gm.remove(this);
         }
     }
 

@@ -1,8 +1,10 @@
 package com.myself.tank;
 
+import com.myself.tank.mediator.GameObject;
+
 import java.awt.*;
 
-public class Bullet {
+public class Bullet extends GameObject {
     public static final int WIDTH = ResourceMgr.bulletD.getWidth();
     public static final int HEIGHT = ResourceMgr.bulletD.getHeight();
     private static final int SPEED = 10;
@@ -30,7 +32,7 @@ public class Bullet {
 
     public void paint(Graphics a){
         if (!live){
-            gm.bullets.remove(this);
+            gm.remove(this);
         }
         switch (dir) {
             case DOWN:
@@ -74,16 +76,15 @@ public class Bullet {
 
     }
 
-    public void collide(Tank trank) {
-        if (this.group == trank.group) return;
-
-        if (this.rect.intersects(trank.rect)){
-            this.die();
-            trank.die();
-        }
+    public void die() {
+        this.live = false;
     }
 
-    private void die() {
-        this.live = false;
+    public Group getGroup() {
+        return group;
+    }
+
+    public Rectangle getRect() {
+        return rect;
     }
 }
