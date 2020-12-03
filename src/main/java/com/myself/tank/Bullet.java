@@ -10,18 +10,16 @@ public class Bullet extends GameObject {
     private static final int SPEED = 10;
     public int x,y;
     private Dir dir;
-    private GameModel gm = null;
     private Group group = Group.BAD;
 
     private Rectangle rect = new Rectangle();
 
     private boolean live = true;
 
-    public Bullet(int x, int y, Dir dir, GameModel gm, Group group){
+    public Bullet(int x, int y, Dir dir, Group group){
         this.x = x;
         this.y = y;
         this.dir = dir;
-        this.gm = gm;
         this.group = group;
 
         rect.x = this.x;
@@ -32,7 +30,7 @@ public class Bullet extends GameObject {
 
     public void paint(Graphics a){
         if (!live){
-            gm.remove(this);
+            GameModel.getInstance().remove(this);
         }
         switch (dir) {
             case DOWN:

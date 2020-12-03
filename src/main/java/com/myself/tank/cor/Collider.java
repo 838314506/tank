@@ -4,5 +4,5 @@ import com.myself.tank.mediator.GameObject;
 
 public interface Collider {
 
-    public void collider(GameObject o1,GameObject o2);
+    public boolean collider(GameObject o1,GameObject o2);
 }

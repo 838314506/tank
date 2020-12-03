@@ -13,7 +13,6 @@ import java.util.List;
  */
 public class TankFrame extends Frame {
 
-    public GameModel gm = new GameModel();
 
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
@@ -35,7 +34,7 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics a) {
-        gm.paint(a);
+        GameModel.getInstance().paint(a);
     }
 
     Image offScreenImage = null;
@@ -79,7 +78,7 @@ public class TankFrame extends Frame {
                     bD = true;
                     break;
                 case KeyEvent.VK_CONTROL:
-                    gm.myTrank.fire();
+                    GameModel.getInstance().myTrank.fire();
                     break;
                 default:
                     break;
@@ -111,13 +110,13 @@ public class TankFrame extends Frame {
 
         private void setMainTrank() {
             if (!bL && !bU && !bR && !bD) {
-                gm.myTrank.setMoving(false);
+                GameModel.getInstance().myTrank.setMoving(false);
             } else {
-                gm.myTrank.setMoving(true);
-                if (bL) gm.myTrank.setDir(Dir.LEFT);
-                if (bU) gm.myTrank.setDir(Dir.UP);
-                if (bR) gm.myTrank.setDir(Dir.RIGHT);
-                if (bD) gm.myTrank.setDir(Dir.DOWN);
+                GameModel.getInstance().myTrank.setMoving(true);
+                if (bL) GameModel.getInstance().myTrank.setDir(Dir.LEFT);
+                if (bU) GameModel.getInstance().myTrank.setDir(Dir.UP);
+                if (bR) GameModel.getInstance().myTrank.setDir(Dir.RIGHT);
+                if (bD) GameModel.getInstance().myTrank.setDir(Dir.DOWN);
             }
         }
     }

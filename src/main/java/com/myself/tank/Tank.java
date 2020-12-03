@@ -18,7 +18,6 @@ public class Tank extends GameObject {
     private int oldX,oldY;
     //方向
     private Dir dir = Dir.DOWN;
-    private GameModel gm = null;
 
     private Group group = Group.BAD;
 
@@ -47,16 +46,16 @@ public class Tank extends GameObject {
         this.moving = moving;
     }
 
-    public Tank(int x, int y, Dir dir,GameModel gm, Group group) {
+    public Tank(int x, int y, Dir dir,Group group) {
         this.x = x;
         this.y = y;
         this.dir = dir;
         this.group = group;
-        this.gm = gm;
         rect.x = this.x;
         rect.y = this.y;
         rect.width = WIDTH;
         rect.height = HEIGHT;
+        GameModel.getInstance().add(this);
     }
 
     public Dir getDir() {
@@ -70,7 +69,7 @@ public class Tank extends GameObject {
     //画坦克
     public void paint(Graphics a) {
         if (!live){
-            gm.remove(this);
+            GameModel.getInstance().remove(this);
         }
 
         switch (dir) {
@@ -94,8 +93,8 @@ public class Tank extends GameObject {
 
     //移动
     public void move() {
-        this.oldX = x;
-        this.oldY = y;
+        oldX = x;
+        oldY = y;
         if (!moving) return;
         switch (dir) {
             case LEFT:
@@ -113,6 +112,7 @@ public class Tank extends GameObject {
             default:
                 break;
         }
+
         if (this.group == Group.BAD && random.nextInt(100) > 95) this.fire();
         if (this.group == Group.BAD  && random.nextInt(100) > 95) randomDir();
 
@@ -141,7 +141,7 @@ public class Tank extends GameObject {
     public void fire() {
         int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
         int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
-        gm.add(new Bullet(bx, by, dir, gm,this.group));
+        GameModel.getInstance().add(new Bullet(bx, by, dir, this.group));
 //        for (int i = 0;i < tf.bullets.size();i ++){
 //            Bullet bullet = tf.bullets.get(i);
 //            if (x < bullet.x && 2 * x > bullet.x && y == bullet.y){
@@ -172,12 +172,12 @@ public class Tank extends GameObject {
         this.live = false;
         int eX = this.x + Tank.WIDTH / 2 - Explored.WIDTH / 2;
         int eY = this.y + Tank.HEIGHT / 2 - Explored.HEIGHT / 2;
-        Explored e = new Explored(eX, eY, gm);
-        gm.add(e);
+        Explored e = new Explored(eX, eY);
+        GameModel.getInstance().add(e);
     }
 
     public void rollback(){
-        this.x = oldX;
-        this.y = oldY;
+        x = oldX;
+        y = oldY;
     }
 }
