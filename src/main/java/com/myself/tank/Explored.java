@@ -7,7 +7,6 @@ import java.awt.*;
 public class Explored extends GameObject {
     public static final int WIDTH = ResourceMgr.explored[0].getWidth();
     public static final int HEIGHT = ResourceMgr.explored[0].getHeight();
-    public int x,y;
     //private boolean live = true;
     private int step = 0;
 
@@ -21,6 +20,16 @@ public class Explored extends GameObject {
         if (step >= ResourceMgr.explored.length){
             GameModel.getInstance().remove(this);
         }
+    }
+
+    @Override
+    public int getWidth() {
+        return WIDTH;
+    }
+
+    @Override
+    public int getHeight() {
+        return HEIGHT;
     }
 
 }

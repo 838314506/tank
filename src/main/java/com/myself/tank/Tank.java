@@ -1,20 +1,25 @@
 package com.myself.tank;
 
+import com.myself.tank.fireObserver.TankFireEvent;
+import com.myself.tank.fireObserver.TankFireHandler;
+import com.myself.tank.fireObserver.TankFireObserver;
 import com.myself.tank.mediator.GameObject;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 //坦克
 public class Tank extends GameObject {
     //坦克宽度、高度
-    static final int WIDTH = ResourceMgr.goodTankU.getWidth();
-    static final int HEIGHT = ResourceMgr.goodTankU.getHeight();
+    public static final int WIDTH = ResourceMgr.goodTankU.getWidth();
+    public static final int HEIGHT = ResourceMgr.goodTankU.getHeight();
     //坦克速度
     private static final int SPEED = 5;
     private boolean moving = true;
     private boolean live = true;
-    private int x, y;
     private int oldX,oldY;
     //方向
     private Dir dir = Dir.DOWN;
@@ -91,6 +96,16 @@ public class Tank extends GameObject {
         move();
     }
 
+    @Override
+    public int getWidth() {
+        return WIDTH;
+    }
+
+    @Override
+    public int getHeight() {
+        return HEIGHT;
+    }
+
     //移动
     public void move() {
         oldX = x;
@@ -142,6 +157,7 @@ public class Tank extends GameObject {
         int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
         int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
         GameModel.getInstance().add(new Bullet(bx, by, dir, this.group));
+//        GameModel.getInstance().add(new TailDecorator(new RectDecorator(new Bullet(bx, by, dir, this.group))));
 //        for (int i = 0;i < tf.bullets.size();i ++){
 //            Bullet bullet = tf.bullets.get(i);
 //            if (x < bullet.x && 2 * x > bullet.x && y == bullet.y){
@@ -149,6 +165,15 @@ public class Tank extends GameObject {
 //            }
 //
 //        }
+    }
+
+    private List<TankFireObserver> observers = new LinkedList<>();
+    public void firehandler() {
+        TankFireEvent event = new TankFireEvent(this);
+        observers.add(new TankFireHandler());
+        for (TankFireObserver o : observers){
+            o.fireHandler(event);
+        }
     }
 
     public int getX() {

@@ -5,8 +5,6 @@ import com.myself.tank.mediator.GameObject;
 import java.awt.*;
 
 public class Wall extends GameObject {
-    public int x,y;
-
     public int w,h;
     private Rectangle rect = null;
 
@@ -31,5 +29,15 @@ public class Wall extends GameObject {
 
     public Rectangle getRect() {
         return rect;
+    }
+
+    @Override
+    public int getWidth() {
+        return w;
+    }
+
+    @Override
+    public int getHeight() {
+        return h;
     }
 }
