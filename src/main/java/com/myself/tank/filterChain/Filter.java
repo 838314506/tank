@@ -53,13 +53,13 @@ class FilterChain{
         filters.add(filter);
     }
 
-    public boolean chain(Request request,Response response,FilterChain chain){
+    public void chain(Request request,Response response,FilterChain chain){
         if (index == filters.size()){
-            return false;
+            return;
         }
         Filter f = filters.get(index);
         index ++;
-        return f.doFilter(request,response,this);
+         f.doFilter(request,response,this);
     }
 }
 
