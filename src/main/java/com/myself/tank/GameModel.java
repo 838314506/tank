@@ -125,6 +125,7 @@ public class GameModel {
         ObjectInputStream oos = null;
         try {
             oos = new ObjectInputStream(new FileInputStream(f));
+            //先写的谁就先读谁
             myTrank = (Tank)oos.readObject();
             objects = (List<GameObject>)oos.readObject();
         } catch (IOException e) {
