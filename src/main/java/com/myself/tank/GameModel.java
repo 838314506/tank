@@ -8,6 +8,7 @@ import com.myself.tank.mediator.GameObject;
 import com.myself.tank.resourceMge.PropertyMgr;
 
 import java.awt.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -97,5 +98,47 @@ public class GameModel {
 //        for (int i = 0;i < explored.size();i ++){
 //            explored.get(i).paint(a);
 //        }
+    }
+
+    public void save() {
+        File f = new File("C:/Users/liuzh/Desktop/tank.data");
+        ObjectOutputStream oos = null;
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream(f));
+            oos.writeObject(myTrank);
+            oos.writeObject(objects);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (oos != null){
+                try {
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void load() {
+        File f = new File("C:/Users/liuzh/Desktop/tank.data");
+        ObjectInputStream oos = null;
+        try {
+            oos = new ObjectInputStream(new FileInputStream(f));
+            myTrank = (Tank)oos.readObject();
+            objects = (List<GameObject>)oos.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (oos != null){
+                try {
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

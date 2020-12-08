@@ -16,6 +16,8 @@ public class TankFrame extends Frame {
 
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
+    GameModel gm = GameModel.getInstance();
+
     public TankFrame() {
         setSize(GAME_WIDTH, GAME_HEIGHT);
         setResizable(false);
@@ -34,7 +36,7 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics a) {
-        GameModel.getInstance().paint(a);
+        gm.paint(a);
     }
 
     Image offScreenImage = null;
@@ -78,7 +80,13 @@ public class TankFrame extends Frame {
                     bD = true;
                     break;
                 case KeyEvent.VK_CONTROL:
-                    GameModel.getInstance().myTrank.firehandler();
+                    gm.myTrank.firehandler();
+                    break;
+                case KeyEvent.VK_S:
+                    gm.save();
+                    break;
+                case KeyEvent.VK_L:
+                    gm.load();
                     break;
                 default:
                     break;
