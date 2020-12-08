@@ -1,4 +1,4 @@
-package com.myself.tank.commandAndChain;
+package com.myself.tank.commandAndChain.wrong;
 
 public class Undo extends Command2{
     @Override

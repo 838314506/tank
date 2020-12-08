@@ -1,4 +1,4 @@
-package com.myself.tank.commandAndChain;
+package com.myself.tank.commandAndChain.wrong;
 
 public class DoIt extends Command2{
     @Override
