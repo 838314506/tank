@@ -16,14 +16,12 @@ interface CommandFilter{
 
 class DoIt implements CommandFilter{
 
-    @Override
     public void doFilter(Command2 command) {
 //        command.doIt();
     }
 }
 class UnDo implements CommandFilter{
 
-    @Override
     public void doFilter(Command2 command) {
 //        command.unDo();
     }
