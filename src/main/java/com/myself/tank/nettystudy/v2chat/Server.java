@@ -1,20 +1,16 @@
-package com.myself.tank.nettystudy;
+package com.myself.tank.nettystudy.v2chat;
 
-import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.util.ReferenceCountUtil;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
 public class Server {
-
     public static ChannelGroup clients = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     public static void main(String[] arg) {
@@ -25,7 +21,7 @@ public class Server {
         try {
             ChannelFuture f = b.group(bossGroup,workers)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ServerChannelInitializer())
+                    .childHandler(new ServerChannelInitializer2())
                     .bind(8999)
                     .sync();
             System.out.println("server start");
@@ -40,7 +36,7 @@ public class Server {
     }
 }
 
-class ServerHandler extends ChannelInboundHandlerAdapter {
+class ServerHandler2 extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Server.clients.add(ctx.channel());
@@ -70,10 +66,10 @@ class ServerHandler extends ChannelInboundHandlerAdapter {
     }
 }
 
-class ServerChannelInitializer extends ChannelInitializer<SocketChannel> {
+class ServerChannelInitializer2 extends ChannelInitializer<SocketChannel> {
 
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline p = socketChannel.pipeline();
-        p.addLast(new ServerHandler());
+        p.addLast(new ServerHandler2());
     }
 }
