@@ -5,19 +5,25 @@ import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
+import io.netty.channel.group.ChannelGroup;
+import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.ReferenceCountUtil;
+import io.netty.util.concurrent.GlobalEventExecutor;
 
 public class Server {
 
+    public static ChannelGroup clients = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+
     public static void main(String[] arg) {
-        EventLoopGroup elg = new NioEventLoopGroup(1);
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+        EventLoopGroup workers = new NioEventLoopGroup(2);
 
         ServerBootstrap b = new ServerBootstrap();
         try {
-            ChannelFuture f = b.group(elg)
+            ChannelFuture f = b.group(bossGroup,workers)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ServerChannelInitializer())
                     .bind(8999)
@@ -28,7 +34,8 @@ public class Server {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            elg.shutdownGracefully();
+            bossGroup.shutdownGracefully();
+            workers.shutdownGracefully();
         }
     }
 }
@@ -36,8 +43,7 @@ public class Server {
 class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-//        ByteBuf buf = Unpooled.copiedBuffer("hello".getBytes());
-//        ctx.writeAndFlush(buf);
+        Server.clients.add(ctx.channel());
     }
 
     @Override
@@ -48,10 +54,10 @@ class ServerHandler extends ChannelInboundHandlerAdapter {
             byte[] bytes = new byte[buf.readableBytes()];
             buf.getBytes(buf.readerIndex(), bytes);
             System.out.println(new String(bytes));
-            ctx.writeAndFlush(buf);
+            Server.clients.writeAndFlush(buf);
         } finally {
-            if(buf != null) ReferenceCountUtil.release(buf);
-            System.out.println(buf.refCnt());
+//            if(buf != null) ReferenceCountUtil.release(buf);
+//            System.out.println(buf.refCnt());
         }
 
     }

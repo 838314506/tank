@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abca240f-0894-4873-97f4-a3a8d8be917d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/commandAndChain/Command2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/commandAndChain/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/commandAndChain/StringCommand2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/Explored.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/Explored.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/T.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myself/tank/TankFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Server.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +25,28 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="189" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1100">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,13 +69,21 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="design" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Client.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -70,17 +97,98 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="33" />
+    <option name="y" value="-23" />
+    <option name="width" value="1346" />
+    <option name="height" value="698" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="nettystudy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="nettystudy" type="462c0819:PsiDirectoryNode" />
+              <item name="Client.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="tank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tank" type="462c0819:PsiDirectoryNode" />
+              <item name="nettystudy" type="462c0819:PsiDirectoryNode" />
+              <item name="Server.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606865693102" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607607053449" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -93,7 +201,32 @@
       <recent name="E:\java\company\tank\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StringCommand2">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.nettystudy.Client" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myself.tank.nettystudy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.straegy.Main" />
       <module name="tank" />
@@ -107,25 +240,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleEnumClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.SingleEnumClass" />
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myself.tank.nettystudy.Server" />
       <module name="tank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myself.tank.design.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.myself.tank.design.straegy.Sort" />
-      <module name="tank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myself.tank.design.straegy.*" />
+          <option name="PATTERN" value="com.myself.tank.nettystudy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,13 +279,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.StringCommand2" />
+      <item itemvalue="Application.T" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.StringCommand2" />
         <item itemvalue="Application.T" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Sort" />
-        <item itemvalue="Application.SingleEnumClass" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +327,7 @@
       <workItem from="1606689585944" duration="361000" />
       <workItem from="1606691007566" duration="2577000" />
       <workItem from="1606744846351" duration="11654000" />
+      <workItem from="1607606460791" duration="524000" />
     </task>
     <task id="LOCAL-00001" summary="添加配置文件">
       <created>1606636896097</created>
@@ -225,54 +353,175 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="994000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25738078" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32903227" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4996215" visible="true" weight="0.58225805" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003785" side_tool="true" weight="0.4919355" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Log" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="leetcode" order="6" side_tool="true" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/tank" />
+    </ignored-roots>
     <MESSAGE value="添加配置文件" />
     <MESSAGE value="配置文件管理单例" />
     <option name="LAST_COMMIT_MESSAGE" value="配置文件管理单例" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" timestamp="1607312764232">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1607312764232" />
-    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607312408327">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1607312408327" />
-    <state width="1236" height="246" key="GridCell.Tab.0.bottom" timestamp="1607313056400">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1607313056400" />
-    <state width="1236" height="246" key="GridCell.Tab.0.center" timestamp="1607313056400">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1607313056400" />
-    <state width="1236" height="246" key="GridCell.Tab.0.left" timestamp="1607313056400">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1607313056400" />
-    <state width="1236" height="246" key="GridCell.Tab.0.right" timestamp="1607313056400">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1607313056400" />
-    <state width="1236" height="246" key="GridCell.Tab.1.bottom" timestamp="1607313056325">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1607313056325" />
-    <state width="1236" height="246" key="GridCell.Tab.1.center" timestamp="1607313056325">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1607313056325" />
-    <state width="1236" height="246" key="GridCell.Tab.1.left" timestamp="1607313056325">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1607313056325" />
-    <state width="1236" height="246" key="GridCell.Tab.1.right" timestamp="1607313056325">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state width="1236" height="246" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1607313056325" />
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.0.bottom" />
+    <state width="1236" height="246" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.0.center" />
+    <state width="1236" height="246" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.0.left" />
+    <state width="1236" height="246" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.0.right" />
+    <state width="1236" height="246" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.1.bottom" />
+    <state width="1236" height="246" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.1.center" />
+    <state width="1236" height="246" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.1.left" />
+    <state width="1236" height="246" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" />
+    <state width="1236" height="246" key="GridCell.Tab.1.right" />
+    <state width="1236" height="246" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/commandAndChain/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myself/tank/nettystudy/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>tank</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: io.netty:netty-all:4.1.33.Final</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

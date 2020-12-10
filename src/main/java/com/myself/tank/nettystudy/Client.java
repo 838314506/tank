@@ -26,11 +26,11 @@ public class Client {
                     .connect("localhost", 8999);
             f.addListener(new ChannelFutureListener() {
                 @Override
-                public void operationComplete(ChannelFuture channelFuture) throws Exception {
-                    if (!channelFuture.isSuccess()){
-                        System.out.println("connect failure");
-                    }else {
-                        System.out.println("connect success");
+                public void operationComplete(ChannelFuture future) throws Exception {
+                    if(!future.isSuccess()) {
+                        System.out.println("not connected!");
+                    } else {
+                        System.out.println("connected!");
                     }
                 }
             });
@@ -39,7 +39,7 @@ public class Client {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-
+            elg.shutdownGracefully();
         }
 
     }
@@ -60,7 +60,7 @@ class ClientHandler extends ChannelInboundHandlerAdapter{
             byte[] bytes = new byte[buf.readableBytes()];
             buf.getBytes(buf.readerIndex(),bytes);
             System.out.println(new String(bytes));
-            ctx.writeAndFlush(buf);
+//            ctx.writeAndFlush(buf);
         }finally {
             if (buf != null) ReferenceCountUtil.release(buf);
         }
