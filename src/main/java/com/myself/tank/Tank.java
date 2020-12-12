@@ -1,7 +1,12 @@
 package com.myself.tank;
 
+import com.myself.tank.net.BulletNew;
+import com.myself.tank.net.Client;
+import com.myself.tank.net.TankJoinMsg;
+
 import java.awt.*;
 import java.util.Random;
+import java.util.UUID;
 
 //坦克
 public class Tank {
@@ -9,13 +14,22 @@ public class Tank {
     static final int WIDTH = ResourceMgr.goodTankU.getWidth();
     static final int HEIGHT = ResourceMgr.goodTankU.getHeight();
     //坦克速度
-    private static final int SPEED = 5;
-    private boolean moving = true;
+    private static final int SPEED = 1;
+    private boolean moving = false;
     private boolean live = true;
     private int x, y;
     //方向
     private Dir dir = Dir.DOWN;
     private TankFrame tf = null;
+    private UUID id = UUID.randomUUID();
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public Group group = Group.BAD;
 
@@ -38,6 +52,15 @@ public class Tank {
 
     public void setMoving(boolean moving) {
         this.moving = moving;
+    }
+
+    public Tank(TankJoinMsg msg){
+        this.x = msg.x;
+        this.y = msg.y;
+        this.dir = msg.dir;
+        this.group = msg.group;
+        this.moving = msg.moving;
+        this.id = msg.id;
     }
 
     public Tank(int x, int y, Dir dir, TankFrame tf, Group group) {
@@ -66,6 +89,12 @@ public class Tank {
         if (!live){
             tf.foeTranks.remove(this);
         }
+
+        Color color = a.getColor();
+        a.setColor(Color.YELLOW);
+        a.drawString(id.toString(),x,y - 20);
+        a.drawString("live = " + live ,x ,y - 10);
+        a.setColor(color);
 
         switch (dir) {
             case DOWN:
@@ -133,7 +162,10 @@ public class Tank {
     public void fire() {
         int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
         int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
-        tf.bullets.add(new Bullet(bx, by, dir, tf,this.group));
+        Bullet b = new Bullet(bx, by, dir, tf, this.group,this.id);
+
+        Client.INSTANCE.send(new BulletNew(b));
+        tf.bullets.add(b);
 //        for (int i = 0;i < tf.bullets.size();i ++){
 //            Bullet bullet = tf.bullets.get(i);
 //            if (x < bullet.x && 2 * x > bullet.x && y == bullet.y){
