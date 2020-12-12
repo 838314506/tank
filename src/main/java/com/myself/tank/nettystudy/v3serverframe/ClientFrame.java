@@ -1,7 +1,10 @@
-package com.myself.tank.nettystudy.v2chat;
+package com.myself.tank.nettystudy.v3serverframe;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class ClientFrame extends Frame {
 

@@ -1,4 +1,4 @@
-package com.myself.tank.nettystudy.v2chat;
+package com.myself.tank.nettystudy.v3serverframe;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
@@ -53,6 +53,7 @@ public class Client {
         this.send("_bye_");
     }
 }
+
 class ClientHandler2 extends ChannelInboundHandlerAdapter{
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

@@ -1,4 +1,4 @@
-package com.myself.tank.nettystudy.v2chat;
+package com.myself.tank.nettystudy.v3serverframe;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
@@ -13,21 +13,24 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 import static com.myself.tank.nettystudy.v2chat.Server.clients;
 
 public class Server {
+
     public static ChannelGroup clients = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
-    public static void main(String[] arg) {
+    public Channel channel = null;
+
+    public void serverStart() {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workers = new NioEventLoopGroup(2);
 
         ServerBootstrap b = new ServerBootstrap();
         try {
-            ChannelFuture f = b.group(bossGroup,workers)
+            ChannelFuture f = b.group(bossGroup, workers)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ServerChannelInitializer2())
+                    .childHandler(new ServerChannelInitializer3())
                     .bind(8999)
                     .sync();
-            System.out.println("server start");
-
+            ServerFrame.INSTANCE.updateServerMsg("server start");
+            channel = f.channel();
             f.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -36,9 +39,14 @@ public class Server {
             workers.shutdownGracefully();
         }
     }
+
+    public void close() {
+        System.out.println("close");
+        channel.close();
+    }
 }
 
-class ServerHandler2 extends ChannelInboundHandlerAdapter {
+class ServerHandler3 extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         clients.add(ctx.channel());
@@ -52,7 +60,9 @@ class ServerHandler2 extends ChannelInboundHandlerAdapter {
             byte[] bytes = new byte[buf.readableBytes()];
             buf.getBytes(buf.readerIndex(), bytes);
             String revMsg = new String(bytes);
-            if (revMsg.equals("_bye_")){
+
+            ServerFrame.INSTANCE.updateClientMsg(revMsg);
+            if (revMsg.equals("_bye_")) {
                 clients.remove(ctx.channel());
                 System.out.println("客户端请求下线");
                 ctx.close();
@@ -64,20 +74,11 @@ class ServerHandler2 extends ChannelInboundHandlerAdapter {
         }
 
     }
-
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        cause.printStackTrace();
-        clients.remove(ctx.channel());
-        ctx.close();
-        System.out.println("exception");
-    }
 }
-
-class ServerChannelInitializer2 extends ChannelInitializer<SocketChannel> {
+class ServerChannelInitializer3 extends ChannelInitializer<SocketChannel> {
 
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline p = socketChannel.pipeline();
-        p.addLast(new ServerHandler2());
+        p.addLast(new ServerHandler3());
     }
 }
