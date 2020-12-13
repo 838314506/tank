@@ -2,6 +2,7 @@ package com.myself.tank;
 
 import com.myself.tank.net.BulletNew;
 import com.myself.tank.net.Client;
+import com.myself.tank.net.TankDieMsg;
 import com.myself.tank.net.TankJoinMsg;
 
 import java.awt.*;
@@ -10,6 +11,14 @@ import java.util.UUID;
 
 //坦克
 public class Tank {
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
     //坦克宽度、高度
     static final int WIDTH = ResourceMgr.goodTankU.getWidth();
     static final int HEIGHT = ResourceMgr.goodTankU.getHeight();
@@ -58,9 +67,14 @@ public class Tank {
         this.x = msg.x;
         this.y = msg.y;
         this.dir = msg.dir;
-        this.group = msg.group;
         this.moving = msg.moving;
+        this.group = msg.group;
         this.id = msg.id;
+
+        rect.x = this.x;
+        rect.y = this.y;
+        rect.width = WIDTH;
+        rect.height = HEIGHT;
     }
 
     public Tank(int x, int y, Dir dir, TankFrame tf, Group group) {
@@ -87,7 +101,11 @@ public class Tank {
     //画坦克
     public void paint(Graphics a) {
         if (!live){
-            tf.foeTranks.remove(this);
+            Color cc = a.getColor();
+            a.setColor(Color.WHITE);
+            a.drawRect(x, y, WIDTH, HEIGHT);
+            a.setColor(cc);
+            return;
         }
 
         Color color = a.getColor();
@@ -191,12 +209,19 @@ public class Tank {
         this.y = y;
     }
 
+    public boolean isLive() {
+        return live;
+    }
+
+    public void setLive(boolean live) {
+        this.live = live;
+    }
+
     //死亡
     public void die() {
         this.live = false;
         int eX = this.x + Tank.WIDTH / 2 - Explored.WIDTH / 2;
         int eY = this.y + Tank.HEIGHT / 2 - Explored.HEIGHT / 2;
-        Explored e = new Explored(eX, eY, tf);
-        tf.explored.add(e);
+        TankFrame.INSTANCE.explored.add(new Explored(eX, eY,TankFrame.INSTANCE));
     }
 }

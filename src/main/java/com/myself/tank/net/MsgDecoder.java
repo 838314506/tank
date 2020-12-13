@@ -24,24 +24,25 @@ public class MsgDecoder extends ByteToMessageDecoder {
         byte[] bytes = new byte[msgLength];
         byteBuf.readBytes(bytes);
         System.out.println(mt.toString());
-        Msg msg = null;
-//        Msg msg = (Msg) Class.forName("com.myself.tank.net." + mt.toString()).getDeclaredConstructor().newInstance();
-        switch (mt) {
-            case TankJoinMsg:
-                msg = new TankJoinMsg();
-                break;
-            case TankMoveMsg:
-                msg = new TankMoveMsg();
-                break;
-            case TankStopMsg:
-                msg = new TankStopMsg();
-                break;
-            case BulletNew:
-                msg = new BulletNew();
-                break;
-            default:
-                break;
-        }
+//        Msg msg = null;
+        //使用反射优化switch分支
+        Msg msg = (Msg) Class.forName("com.myself.tank.net." + mt.toString()).getDeclaredConstructor().newInstance();
+//        switch (mt) {
+//            case TankJoinMsg:
+//                msg = new TankJoinMsg();
+//                break;
+//            case TankMoveMsg:
+//                msg = new TankMoveMsg();
+//                break;
+//            case TankStopMsg:
+//                msg = new TankStopMsg();
+//                break;
+//            case BulletNew:
+//                msg = new BulletNew();
+//                break;
+//            default:
+//                break;
+//        }
         msg.parse(bytes);
         list.add(msg);
     }

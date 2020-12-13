@@ -23,13 +23,13 @@ public class TankJoinMsg extends Msg{
         this.x = t.getX();
         this.y = t.getY();
         this.dir = t.getDir();
-        this.moving = t.isMoving();
-        this.group = t.group;
+        this.group = t.getGroup();
         this.id = t.getId();
-
+        this.moving = t.isMoving();
     }
 
     public TankJoinMsg(int x, int y, Dir dir, Group group, boolean moving, UUID id) {
+        super();
         this.x = x;
         this.y = y;
         this.dir = dir;

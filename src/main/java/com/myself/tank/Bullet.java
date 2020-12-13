@@ -1,6 +1,8 @@
 package com.myself.tank;
 
 import com.myself.tank.net.BulletNew;
+import com.myself.tank.net.Client;
+import com.myself.tank.net.TankDieMsg;
 
 import java.awt.*;
 import java.util.UUID;
@@ -11,7 +13,7 @@ public class Bullet {
     private static final int SPEED = 2;
     private UUID id = UUID.randomUUID();
 
-    private UUID playerID = UUID.randomUUID();
+    private UUID playerID;
 
     public UUID getPlayerID() {
         return playerID;
@@ -145,16 +147,19 @@ public class Bullet {
 
     }
 
-    public void collide(Tank trank) {
-        if (this.group == trank.group) return;
-
-        if (this.rect.intersects(trank.rect)){
+    public void collide(Tank tank) {
+        if(this.playerID.equals(tank.getId())) return;
+        //System.out.println("bullet rect:" + this.rect);
+        //System.out.println("tank rect:" + tank.rect);
+        if(this.live && tank.isLive() && this.rect.intersects(tank.rect)) {
+            tank.die();
             this.die();
-            trank.die();
+            Client.INSTANCE.send(new TankDieMsg(tank.getId(),this.id));
         }
+
     }
 
-    private void die() {
+    public void die() {
         this.live = false;
     }
 }

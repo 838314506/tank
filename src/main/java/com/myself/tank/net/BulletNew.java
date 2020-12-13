@@ -133,7 +133,6 @@ public class BulletNew extends Msg {
     @Override
     public void parse(byte[] bytes) {
         DataInputStream dis = null;
-
         try {
             dis = new DataInputStream(new ByteArrayInputStream(bytes));
             this.x = dis.readInt();

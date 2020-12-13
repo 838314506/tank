@@ -56,6 +56,10 @@ public class TankFrame extends Frame {
         this.myTrank = myTrank;
     }
 
+    public void addExplored(Explored e){
+        explored.add(e);
+    }
+
     @Override
     public void paint(Graphics a) {
         myTrank.paint(a);
@@ -70,10 +74,14 @@ public class TankFrame extends Frame {
         }
 
         for (int i = 0;i < bullets.size();i ++){
-            for (int j = 0;j < foeTranks.size();j ++){
-                bullets.get(i).collide(foeTranks.get(j));
+//            for (int j = 0;j < foeTranks.size();j ++){
+//                bullets.get(i).collide(foeTranks.get(j));
+//            }
+            for (Tank t : tanks.values()){
+                bullets.get(i).collide(t);
             }
         }
+
 
         for (int i = 0;i < explored.size();i ++){
             explored.get(i).paint(a);
@@ -98,6 +106,15 @@ public class TankFrame extends Frame {
 
     public Tank findByUUID(UUID id) {
         return tanks.get(id);
+    }
+
+    public Bullet findBulletByUUID(UUID bulletId){
+        for(int i = 0;i < bullets.size();i ++){
+            if (bullets.get(i).getId().equals(bulletId)){
+                return bullets.get(i);
+            }
+        }
+        return null;
     }
 
     public void put(Tank t){
